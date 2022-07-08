@@ -1,0 +1,533 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,600;0,700;1,600;1,700&family=Bellefair&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+     --bgd: url("./assets/home/background-home-desktop.jpg");
+     --bgm: url("./assets/home/background-home-mobile.jpg");
+     --bgt: url("./assets/home/background-home-tablet.jpg");
+}
+
+body {
+    background-color: rgb(32, 29, 29);
+    scroll-behavior: smooth;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-family: 'Bellefair', serif;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+#mainbodywrap {
+    position: relative;
+    max-width: 1440px;
+    height: 900px;
+    background-image: var(--bgd);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    object-fit: contain;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hamburger {
+    display: none;
+}
+
+#head {
+    width: 100%;
+    height: 100px;
+    top: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000000;
+}
+
+.logo {
+    position: absolute;
+    top: 60px;
+}
+
+.line {
+    position: absolute;
+    top: 80px;
+    left: 170px;
+    width: 35%;
+    height: 2px;
+    z-index: 1;
+    background: linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.1));
+}
+
+.desktopmenu {
+    position: absolute;
+    top: 45px;
+    right: 0%;
+    width: 55%;
+    height: 80px;
+    display: flex;
+    background: linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.1));
+    backdrop-filter: blur(2rem);
+}
+
+.home,
+.destination,
+.crew,
+.tech {
+    position: absolute;
+    height: 100%;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: whitesmoke;
+    background: transparent;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    font-family: 'Barlow Semi Condensed',;
+}
+
+
+.home {
+    border-bottom: 3px solid whitesmoke;
+}
+
+.destination,
+.crew,
+.tech {
+    border-bottom: 1px solid transparent;
+}
+
+.destination:hover,
+.crew:hover,
+.tech:hover {
+    border-bottom: 1px solid whitesmoke;
+}
+
+.home {
+    left: 100px;
+}
+
+.destination {
+    left: 240px;
+}
+
+.crew {
+    left: 400px;
+}
+
+.tech {
+    left: 520px;
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+}
+
+.main1 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hometext {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 0%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.detail {
+    position: absolute;
+    width: 50%;
+    top: 360px;
+}
+
+.space {
+    font-size: 18px;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: silver;
+    line-height: 100px;
+}
+
+.bold-space {
+    color: whitesmoke;
+    font-size: 100px;
+    font-family: 'Bellefair', serif;
+}
+
+.space-text {
+    text-align: justify;
+    font-weight: 400;
+    color: silver;
+    font-size: 14.5px;
+    line-height: 20px;
+    font-family: 'Barlow';
+}
+
+.circlewrap {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle {
+    position: absolute;
+    top: 450px;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    opacity: 1;
+}
+
+.circle:hover {
+    outline: 60px solid rgb(255,255,255,0.1);
+}
+
+.explore {
+    color: rgb(49, 48, 48);
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.closer {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+
+    #mainbodywrap {
+        width: 100%;
+        min-height: 100vh;
+        background-image: var(--bgm);
+        margin: 0%;
+        background-size: cover;
+    }
+    
+    #head {
+        width: 100%;
+        height: 60px;
+    }
+    
+    #navbar {
+        width: 80%;
+        display: flex;
+    }
+    
+    .logo {
+        position: absolute;
+        top: 30px;
+    }
+
+    .hamburger {
+        display: flex;
+        position: absolute;
+        top: 40px;
+        right: 10%;
+    }
+
+    .closer {
+        display: flex;
+        position: absolute;
+        top: 40px;
+        right: 10%;
+    }
+    
+    .line {
+        display: none;
+    }
+    
+    .desktopmenu {
+        position: absolute;
+        top: -100%;
+        bottom: 0%;
+        right: 0%;
+        width: 70%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+        transition: 0.5s all ease;
+    }
+    
+    .home,
+    .destination,
+    .crew,
+    .tech {
+        position: absolute;
+        height: 30px;
+        font-size: 18px;
+    }
+ 
+    .home:hover,
+    .destination:hover,
+    .crew:hover,
+    .tech:hover {
+        border-bottom: 3px solid whitesmoke;
+    }
+    
+    .home {
+        left: 40px;
+        top: 150px;
+    }
+    
+    .destination {
+        left: 40px;
+        top: 210px;
+    }
+    
+    .crew {
+        left: 40px;
+        top: 270px;
+    }
+    
+    .tech {
+        left: 40px;
+        top: 320px;
+    } 
+    
+    #main {
+        height: auto;
+        width: 100%;
+    }
+    
+    .main1 {
+        height: 300px;
+        width: 100%;
+        top: 0%;
+        display: flex;
+        padding: 30px;
+        flex-direction: column;
+    }
+    
+    .hometext {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        display: flex;
+        padding: 30px;
+        top: 0%;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .detail {
+        position: absolute;
+        width: 80%;
+        top: 150px;
+        text-align: center;
+    }
+    
+    .space {
+        width: 300px;
+        font-size: 16px;
+        line-height: 80px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .bold-space {
+        font-size: 80px;
+    }
+    
+    .space-text {
+        text-align: center;
+        font-size: 14.5px;
+        line-height: 20px;
+    }
+    
+    .circlewrap {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 30px;
+    }
+    
+    .circle {
+        position: absolute;
+        top: 450;
+        width: 150px;
+        height: 150px;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #mainbodywrap {
+        width: 100%;
+        min-height: 110vh;
+        background-image: var(--bgt);
+        margin: 0%;
+        background-size: cover;
+    }
+    
+    #head {
+        width: 100%;
+        height: 60px;
+    }
+    
+    #navbar {
+        width: 80%;
+        display: flex;
+    }
+    
+    .logo {
+        position: absolute;
+        top: 30px;
+        /* filter: opacity(0.5) drop-shadow(0 0 0 black); */
+        
+    }
+
+    .hamburger {
+        display: none;
+    }
+    
+    .line {
+        display: none;
+    }
+    
+    .desktopmenu {
+        top: 0%;
+        width: 55%;
+    }
+    
+    .home {
+        left: 50px;
+    }
+    
+    .destination {
+        left: 120px;
+    }
+    
+    .crew {
+        left: 230px;
+    }
+    
+    .tech {
+        left: 290px;
+    }
+
+    .span {
+        display: none;
+    }
+    
+    #main {
+        height: auto;
+        width: 100%;
+    }
+    
+    .main1 {
+        height: 300px;
+        width: 100%;
+        top: 0%;
+        display: flex;
+        padding: 30px;
+        flex-direction: column;
+    }
+    
+    .hometext {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        display: flex;
+        padding: 30px;
+        top: 0%;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .detail {
+        position: absolute;
+        width: 80%;
+        top: 150px;
+        text-align: center;
+    }
+    
+    .space {
+        font-size: 20px;
+        width: 500px;
+        line-height: 130px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .bold-space {
+        font-size: 150px;
+    }
+    
+    .space-text {
+        text-align: center;
+        font-size: 20px;
+        line-height: 20px;
+        font-weight: 500;
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .circlewrap {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 200px;
+    }
+    
+    .circle {
+        top: 500px;
+        border-radius: 100%;
+        width: 250px;
+        height: 250px;
+    }
+
+    .explore {
+        font-size: 40px;
+    }
+
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1180px) {
+
+    .line {
+        width: 30%;
+    }
+    
+    .desktopmenu {
+        width: 60%;
+    }
+}

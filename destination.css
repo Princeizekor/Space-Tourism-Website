@@ -1,0 +1,992 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,600;0,700;1,600;1,700&family=Bellefair&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+     --bgd: url("./assets/destination/background-destination-desktop.jpg");
+     --bgm: url("./assets/destination/background-destination-mobile.jpg");
+     --bgt: url("./assets/destination/background-destination-tablet.jpg");
+}
+
+body {
+    background-color: rgb(32, 29, 29);
+    scroll-behavior: smooth;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-family: 'Bellefair', serif;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+#mainbodywrap {
+    position: relative;
+    max-width: 1440px;
+    height: 900px;
+    background-image: var(--bgd);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    object-fit: contain;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hamburger {
+    display: none;
+}
+
+#head {
+    width: 100%;
+    height: 100px;
+    top: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000000;
+}
+
+.logo {
+    position: absolute;
+    top: 60px;
+}
+
+.line {
+    position: absolute;
+    top: 80px;
+    left: 170px;
+    width: 35%;
+    height: 2px;
+    z-index: 1;
+    background: linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.1));
+}
+
+.desktopmenu {
+    position: absolute;
+    top: 45px;
+    right: 0%;
+    width: 55%;
+    height: 80px;
+    display: flex;
+    background: linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.1));
+    backdrop-filter: blur(2rem);
+}
+
+.home,
+.destination,
+.crew,
+.tech {
+    position: absolute;
+    height: 100%;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: whitesmoke;
+    background: transparent;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    font-family: 'Barlow Semi Condensed',;
+    border-bottom: 1px solid transparent;
+}
+
+.destination {
+    border-bottom: 3px solid whitesmoke;
+}
+
+.home,
+.crew,
+.tech {
+    border-bottom: 1px solid transparent;
+}
+
+.home:hover,
+.crew:hover,
+.tech:hover {
+    border-bottom: 1px solid whitesmoke;
+}
+
+.home {
+    left: 100px;
+}
+
+.destination {
+    left: 240px;
+}
+
+.crew {
+    left: 400px;
+}
+
+.tech {
+    left: 520px;
+}
+
+#main {
+    max-width: 1440px;
+}
+
+.main1 {
+    width: 80%;
+    display: flex;
+}
+
+.wrap1 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    left: 100px;
+    top: 150px;
+}
+
+.num1 {
+    margin-right: 15px;
+    color: gray;
+}
+
+.pick {
+    width: 382px;
+    height: 34px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #FFFFFF;
+    position: absolute;
+    top: 70px;
+    left: 10px;
+}
+
+.moon,
+.mars,
+.europa,
+.titan {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: 180px;
+    left: 100px;
+}
+
+.mars,
+.europa,
+.titan {
+    display: none;
+}
+
+.selector {
+    width: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 150px;
+    right: 100px;
+}
+
+.place {
+    width: 67%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 150px;
+    right: 100px;
+}
+
+.buttons {
+    width: 400px;
+    height: 34px;
+    position: absolute;
+    display: flex;
+    top: 0px;
+    left: 20px;
+}
+
+.btn1,
+.btn2,
+.btn3,
+.btn4 {
+    height: 100%;
+    border: none;
+    outline: none;
+    color: whitesmoke;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    background: transparent;
+    border-bottom: 3px solid transparent;
+}
+
+.btn1 {
+    border-bottom: 3px solid whitesmoke;
+}
+
+.btn2 {
+    margin-left: 30px;
+}
+
+.btn3 {
+    margin-left: 30px;
+}
+
+.btn4 {
+    margin-left: 30px;
+}
+
+.moontext,
+.marstext,
+.europatext,
+.titantext {
+    position: absolute;
+    color: #FFFFFF;
+    font-family: 'Bellefair';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 100px;
+    top: 50px;
+    right: 100px;
+}
+
+.marstext,
+.europatext,
+.titantext {
+    display: none;
+}
+
+.defination,
+.defination2,
+.defination3,
+.defination4 {
+    position: absolute;
+    left: 15px;
+    top: 180px;
+    color: #D0D6F9;
+    font-family: 'Barlow';
+    line-height: 30px;
+    font-weight: 400;
+    font-size: 19px;
+}
+
+.defination2,
+.defination3,
+.defination4 {
+    display: none;
+}
+
+.lines {
+    width: 95%;
+    position: absolute;
+    background: #383B4B;
+    height: 1px;
+    top: 330px;
+    left: 15px;
+    right: 0%;
+    bottom: 0%;
+}
+
+.duration {
+    width: 70%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 380px;
+    left: 15px;
+}
+
+.distance {
+    position: absolute;
+}
+
+.timing {
+    position: absolute;
+    left: 200px;
+}
+
+.avg1,
+.avg2,
+.avg3,
+.avg4 {
+    position: absolute;
+    background: transparent;
+    border: none;
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 150px;
+}
+
+.avg2,
+.avg3,
+.avg4 {
+    display: none;
+}
+
+.est1,
+.est2,
+.est3,
+.est4 {
+    position: absolute;
+    background: transparent;
+    border: none;
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 120px;
+}
+
+.est2,
+.est3,
+.est4 {
+    display: none;
+}
+
+.avg1 p,
+.avg2 p,
+.avg3 p,
+.avg4 p {
+    color: #D0D6F9;
+    font-size: 10px;
+    font-family: 'Bellefair';
+    font-style: normal;
+    font-weight: 400;
+}
+
+.est1 p,
+.est2 p,
+.est3 p,
+.est4 p {
+    color: #D0D6F9;
+    font-size: 10px;
+    font-family: 'Bellefair';
+    font-style: normal;
+    font-weight: 400;
+}
+
+.avg1 .km,
+.avg2 .km,
+.avg3 .km,
+.avg4 .km {
+    color: whitesmoke;
+    font-family: 'Bellefair';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 32px;
+}
+
+.est1 .km,
+.est2 .km,
+.est3 .km,
+.est4 .km {
+    color: whitesmoke;
+    font-family: 'Bellefair';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.closer {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    #mainbodywrap {
+        width: 100%;
+        height: 1100px;
+        background-image: var(--bgm);
+        margin: 0%;
+        background-size: cover;
+    }
+    
+    #head {
+        width: 100%;
+        height: 60px;
+    }
+    
+    #navbar {
+        width: 80%;
+        display: flex;
+    }
+    
+    .logo {
+        position: absolute;
+        top: 30px;
+    }
+
+    .hamburger {
+        display: flex;
+        position: absolute;
+        top: 40px;
+        right: 10%;
+    }
+    
+    .line {
+        display: none;
+    }
+    
+    .closer {
+        display: flex;
+        position: absolute;
+        top: 40px;
+        right: 10%;
+    }
+
+    .desktopmenu {
+        position: absolute;
+        top: -100%;
+        bottom: 0%;
+        right: 0%;
+        width: 70%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+        transition: 0.5s all ease;
+    }
+    
+    .home,
+    .destination,
+    .crew,
+    .tech {
+        position: absolute;
+        height: 30px;
+        font-size: 18px;
+    }
+ 
+    .home:hover,
+    .destination:hover,
+    .crew:hover,
+    .tech:hover {
+        border-bottom: 3px solid whitesmoke;
+    }
+    
+    .home {
+        left: 40px;
+        top: 150px;
+    }
+    
+    .destination {
+        left: 40px;
+        top: 210px;
+    }
+    
+    .crew {
+        left: 40px;
+        top: 270px;
+    }
+    
+    .tech {
+        left: 40px;
+        top: 320px;
+    } 
+
+    .main1 {
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .wrap1 {
+        position: absolute;
+        width: 100%;
+        left: 0%;
+        top: 60px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .pick {
+        width: 100%;
+        height: 40px;
+        top: 70px;
+        left: 0px;
+    }
+    
+    .moon,
+    .mars,
+    .europa,
+    .titan {
+        width: 250px;
+        height: 250px;
+        top: 180px;
+        left: auto;
+    }
+    
+    .selector {
+        width: 100%;
+        top: 150px;
+        right: 0px;
+    }
+    
+    .place {
+        width: 100%;
+        top: 400px;
+        right: 0px;
+    }
+    
+    .buttons {
+        width: 80%;
+        height: 34px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        top: 0px;
+        left: auto;
+    }
+    
+    .btn1,
+    .btn2,
+    .btn3,
+    .btn4 {
+        height: 100%;
+        font-size: 15px;
+    }
+    
+    .btn2,
+    .btn3,
+    .btn4 {
+        margin: 0%
+    }
+    
+    .moontext,
+    .marstext,
+    .europatext,
+    .titantext {
+        font-weight: 400;
+        font-size: 80px;
+        top: 50px;
+        right: auto;
+    }
+    
+    .defination,
+    .defination2,
+    .defination3,
+    .defination4 {
+        left: auto;
+        top: 150px;
+        line-height: 30px;
+        font-weight: 400;
+        font-size: 16px;
+        text-align: center;
+        width: 90%;
+    }
+    
+    .lines {
+        width: 90%;
+        top: 330px;
+        left: auto;
+        right: auto;
+    }
+    
+    .duration {
+        width: 100%;
+        top: 380px;
+        left: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .distance {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .timing {
+        width: 100%;
+        left: auto;
+        top: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .avg1,
+    .avg2,
+    .avg3,
+    .avg4 {
+        width: 150px;
+        margin: 0%;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        top: auto;
+    }
+    
+    .est1,
+    .est2,
+    .est3,
+    .est4 {
+        width: 120px;
+        margin: 0%;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        top: auto;
+    }
+    
+    .avg1 p,
+    .avg2 p,
+    .avg3 p,
+    .avg4 p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+    }
+    
+    .est1 p,
+    .est2 p,
+    .est3 p,
+    .est4 p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+    }
+    
+    .avg1 .km,
+    .avg2 .km,
+    .avg3 .km,
+    .avg4 .km {
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 32px;
+    }
+    
+    .est1 .km,
+    .est2 .km,
+    .est3 .km,
+    .est4 .km {
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 32px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #mainbodywrap {
+        width: 100%;
+        height: 110vh;
+        background-image: var(--bgt);
+        margin: 0%;
+        background-size: cover;
+    }
+    
+    #head {
+        width: 100%;
+        height: 60px;
+    }
+    
+    #navbar {
+        width: 80%;
+        display: flex;
+    }
+    
+    .logo {
+        position: absolute;
+        top: 30px;
+        
+    }
+
+    .hamburger {
+        display: none;
+    }
+    
+    .line {
+        display: none;
+    }
+    
+    .desktopmenu {
+        top: 0%;
+        width: 55%;
+    }
+    
+    .home {
+        left: 50px;
+    }
+    
+    .destination {
+        left: 120px;
+    }
+    
+    .crew {
+        left: 230px;
+    }
+    
+    .tech {
+        left: 290px;
+    }
+
+    .span {
+        display: none;
+    }
+    
+    #main {
+        height: auto;
+        width: 100%;
+    }
+
+    .wrap1 {
+        width: 100%;
+        left: 0%;
+    }
+
+    .pick {
+        top: 0%;
+        left: 0%;
+    }
+    
+    .moon,
+    .mars,
+    .europa,
+    .titan {
+        width: 300px;
+        height: 300px;
+        top: 100px;
+        left: auto;
+    }
+    
+    .selector {
+        width: 100%;
+        top: 180px;
+        right: 0px;
+    }
+    
+    .place {
+        width: 100%;
+        top: 400px;
+        right: 0px;
+    }
+    
+    .buttons {
+        width: 40%;
+        height: 34px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        top: 0px;
+        left: auto;
+    }
+
+    .moontext,
+    .marstext,
+    .europatext,
+    .titantext {
+        font-size: 80px;
+        top: 50px;
+        right: auto;
+    }
+    
+    .defination,
+    .defination2,
+    .defination3,
+    .defination4 {
+        left: auto;
+        top: 150px;
+        line-height: 30px;
+        font-weight: 400;
+        font-size: 20px;
+        text-align: center;
+        width: 85%;
+    }
+    
+    .lines {
+        width: 85%;
+        top: 330px;
+        left: auto;
+        right: auto;
+    }
+    
+    .duration {
+        width: 100%;
+        top: 380px;
+        left: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1300px) {
+    #mainbodywrap {
+        width: 100%;
+        height: 110vh;
+        background-image: var(--bgt);
+        margin: 0%;
+        background-size: cover;
+    }
+    
+    #head {
+        width: 100%;
+        height: 60px;
+    }
+    
+    #navbar {
+        width: 80%;
+        display: flex;
+    }
+    
+    .logo {
+        position: absolute;
+        top: 30px;
+        
+    }
+
+    .hamburger {
+        display: none;
+    }
+    
+    .line {
+        display: none;
+    }
+    
+    .desktopmenu {
+        top: 30px;
+        width: 60%;
+    }
+    
+    .home {
+        left: 50px;
+    }
+    
+    .destination {
+        left: 120px;
+    }
+    
+    .crew {
+        left: 230px;
+    }
+    
+    .tech {
+        left: 290px;
+    }
+
+    .span {
+        display: none;
+    }
+    
+    #main {
+        height: auto;
+        width: 100%;
+    }
+
+    .wrap1 {
+        width: 100%;
+        left: 0%;
+    }
+
+    .pick {
+        top: 0%;
+        left: 0%;
+    }
+    
+    .moon,
+    .mars,
+    .europa,
+    .titan {
+        width: 300px;
+        height: 300px;
+        top: 100px;
+        left: auto;
+    }
+    
+    .selector {
+        width: 100%;
+        top: 180px;
+        right: 0px;
+    }
+    
+    .place {
+        width: 100%;
+        top: 400px;
+        right: 0px;
+    }
+    
+    .buttons {
+        width: 40%;
+        height: 34px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        top: 0px;
+        left: auto;
+    }
+
+    .moontext,
+    .marstext,
+    .europatext,
+    .titantext {
+        font-size: 100px;
+        top: 50px;
+        right: auto;
+        line-height: 100px;
+    }
+    
+    .defination,
+    .defination2,
+    .defination3,
+    .defination4 {
+        left: auto;
+        top: 150px;
+        line-height: 30px;
+        font-weight: 400;
+        font-size: 30px;
+        text-align: center;
+        width: 85%;
+    }
+    
+    .lines {
+        width: 85%;
+        top: 330px;
+        left: auto;
+        right: auto;
+    }
+    
+    .duration {
+        width: 100%;
+        top: 380px;
+        left: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1180px) {
+
+    .line {
+        width: 30%;
+    }
+    
+    .desktopmenu {
+        width: 60%;
+    }
+}
